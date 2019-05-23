@@ -31,3 +31,30 @@ console.log(boggle('abcde')) //15
 console.log(boggle('zodiac')) //
 console.log(boggle('chruschtschov')) //
 console.log(boggle('strength')) //
+
+Attempt #2
+
+function boggle(str){
+  var alpha = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
+  var results = []
+  // console.log(Object.getOwnPropertyNames(alpha))
+  // console.log(Object.values(alpha))
+  // console.log(Object.keys(alpha))
+  for (var i = 0; i< alpha.length; i++){
+  for(var key in alpha){
+      if(Object.getOwnPropertyNames(alpha) === str[i]){
+        // console.log(alpha)
+        results = Object.values(alpha)
+        // console.log(results)
+        results = results.reduce((a , b) => (a) + (b), 0)
+        // console.log(results)
+      }
+  }
+  } 
+
+  return results
+}
+// console.log(boggle('abcde'))
+console.log(boggle('zodiac'))
+// console.log(boggle('chruschtschov'))
+// console.log(boggle('strength'))
