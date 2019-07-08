@@ -3,8 +3,8 @@
     let tempArr = []; 
     for(var i = 0; i < numArr.length; i++){
        let ele = numArr[i]
-        if(Number(numArr[i])){
-            tempArr.push(parseFloat(numArr[i]))
+        if(Number(ele)){
+            tempArr.push(ele)
         }else if(){
             
         }
