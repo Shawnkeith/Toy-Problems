@@ -1,3 +1,4 @@
+//not working
 var longestRun = function(str){
     //create a count var for the run
     let count = 0

@@ -6,27 +6,27 @@
 // //function should take one string value
 // //based on the placement in the alphabet you will add the values of the character
 
-function boggle(str){
-      var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-      var newObj = {};
-      var results = []
-      for (var i = 0; i< alpha.length; i++){
-        var x=1
-          if(alpha !== undefined){
-            newObj[i] = alpha[i]
-        }
-      for(var key in newObj){
-          if( newObj[key] === str[i]){
-            results = Object.getOwnPropertyNames(newObj)
-            results = results.map(Number)
-            // results = results + x
-            results = results.reduce((a , b) => (a+1) + (b), 0)
-          }
-      }
-      } 
+// function boggle(str){
+//       var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+//       var newObj = {};
+//       var results = []
+//       for (var i = 0; i< alpha.length; i++){
+//         var x=1
+//           if(alpha !== undefined){
+//             newObj[i] = alpha[i]
+//         }
+//       for(var key in newObj){
+//           if( newObj[key] === str[i]){
+//             results = Object.getOwnPropertyNames(newObj)
+//             results = results.map(Number)
+//             // results = results + x
+//             results = results.reduce((a , b) => (a+1) + (b), 0)
+//           }
+//       }
+//       } 
     
-      return results
-    }
+//       return results
+//     }
     // console.log(boggle('abcde')) //15
     // console.log(boggle('zodiac')) //
     // console.log(boggle('chruschtschov')) //

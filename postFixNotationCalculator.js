@@ -1,4 +1,5 @@
- var calculate = function(str) {
+//not working yet
+var calculate = function(str) {
     var numArr = str.split(' ');
     let tempArr = []; 
     for(var i = 0; i < numArr.length; i++){

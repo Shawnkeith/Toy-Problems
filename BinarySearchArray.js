@@ -32,18 +32,26 @@
 
 
 var binarySearch = function(arr, target){
-        let middle = arr[Math.round((arr.length-1) / 2)]
-        if(middle === target){
-            return (arr.length-1)/2
-        }else if(target < middle){
-            for( var i =0; i < (arr.length-1)/2; i++ ){
-                console.log(arr[i])
-                
-            }
-        }else if(target > middle){
-            for( var i = (arr.length-1)/2; i <arr.length; i++ )
-            console.log(arr[i])
+   //min index
+    let min = 0;
+    //max index
+    let max = arr.length-1;
+    //for the arr loop through
+    while(min <= max){
+        //set the middle point
+        let middle = Math.floor((min + max) / 2)
+        //if the middle point is equal to the target return
+        if(arr[middle] === target){
+            return middle;
+            //if the target is greater than the middle add one to the min and continue to look through the arr
+        }else if(target > arr[middle]){
+            min = middle + 1;
+            // if the target is less than the middle subtract one the continue the loop
+        }else {
+            max = middle - 1;
         }
+    }
+    //if you can not find the target in the arr return -1
     return -1;
 }
 

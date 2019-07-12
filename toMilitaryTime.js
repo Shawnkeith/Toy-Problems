@@ -1,6 +1,6 @@
 
 //toMilitaryTime
-
+//working but need to add colon
 
 var toMilitary = function(string){
     let am = '';
