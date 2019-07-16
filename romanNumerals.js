@@ -95,5 +95,5 @@ console.log(romanNumeral("LX")) // => 60
 console.log(romanNumeral("IV")) // => 4
 console.log(romanNumeral("horse")) // => 'null'
 console.log(romanNumeral("")) // => 0
-console.log(romanNumeral("CCXI"))
-console.log(romanNumeral("MMMCDXXIV"))
+console.log(romanNumeral("XXXX"))
+// console.log(romanNumeral("MMMCDXXIV"))
