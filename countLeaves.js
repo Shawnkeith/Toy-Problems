@@ -56,6 +56,7 @@
       }
       return false;
     }
+  }
   // };
   
   // /**
@@ -79,5 +80,4 @@
   root.children[0].addChild(new Tree()); 
   root.children[0].addChild(new Tree()); 
   root.children[0].children[0].addChild(new Tree()); 
-  console.log(root.countLeaves()); // 3```
-  // console.log(root)
+  console.log(root.countLeaves()); //3

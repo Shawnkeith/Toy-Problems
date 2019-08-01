@@ -1,20 +1,42 @@
 var isBalanced = function(str){
-    let openArr = [];
-    let closedArr = [];
-    if( str[0] === ')' || str[0] === '}' || str[0] === ']' ){
-        return false;
+    let stack = [];
+    let open = {
+        '{': '}',
+        '[': ']',
+        '(': ')'
+    };
+    let closed = {
+        '}': true,
+        ']': true,
+        ')': true
     }
-    for( let i = 0; i < str.length; i++ ){
-        if(str[i] === '(' || str[i] === '{'  || str[i] === '[' ){
-            openArr.push(str[i])
-            // console.log(arr)
-        }else if( str[i] === ')' || str[i] === '}'  || str[i] === ']'){
-            closedArr.push(str[i])
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (open[char]) {
+            stack.push(char);
+        } else if (closed[char]) {
+            if (open[stack.pop()] !== char) return false;
         }
     }
-    if(closedArr.length !== openArr.length){
-        return false;
-    }
+    return stack.length === 0;
+   
+    // let openArr = [];
+    // let closedArr = [];
+    // if( str[0] === ')' || str[0] === '}' || str[0] === ']' ){
+    //     return false;
+    // }
+    // for( let i = 0; i < str.length; i++ ){
+    //     if(str[i] === '(' || str[i] === '{'  || str[i] === '[' ){
+    //         openArr.push(str[i])
+    //         // console.log(arr)
+    //     }else if( str[i] === ')' || str[i] === '}'  || str[i] === ']'){
+    //         closedArr.push(str[i])
+    //     }
+    // }
+    // if(closedArr.length !== openArr.length){
+    //     return false;
+    // }
     // for(let j = 0; j < openArr.length; j++){
     //     if ( openArr[j] === '('  && closedArr[j] === ')' ){
     //         openArr.pop(openArr[j])
@@ -30,10 +52,10 @@ var isBalanced = function(str){
     //     }
     // }
         
-        console.log(openArr)
-        console.log(closedArr)
-    return openArr.length === 0 && closedArr.length === 0;
-}
+    //     console.log(openArr)
+    //     console.log(closedArr)
+    // return openArr.length === 0 && closedArr.length === 0;
+};
 
 console.log(`Test1: expected false and got ${isBalanced(')(')}`);
 console.log(`Test2: expected false and got ${isBalanced('()(()()()())((()(()()))')}`);

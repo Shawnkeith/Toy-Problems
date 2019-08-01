@@ -9,7 +9,7 @@ var mergeSort = function(arr){
   var holdingArr = [];
   //loop through the array and make every index an individual array
   for(let i = 0; i < arr.length; i ++){
-    console.log(arr[i])
+    console.log(arr)
     // holdingArr = arr.splice(arr[i])
   }
   console.log(holdingArr);

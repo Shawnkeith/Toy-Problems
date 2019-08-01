@@ -6,7 +6,7 @@ this.children = [];
 Tree.prototype.map = function(callback){
 let results = new Tree(callback(this.value))
 console.log(this.children)
-this.children.forEach()
+this.children.forEach(children)
 for(var i = 0; i < this.children.length; i++){
 var element = this.children[i]
 results.children = this.addChild(this.children.map(callback))

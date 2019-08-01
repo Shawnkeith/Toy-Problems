@@ -74,53 +74,53 @@ console.log(`Test9: should bind only the first and second arguments (in this exa
 
 
 
-  // part II
-  Function.prototype.bind = function(context) {
-    // your code here!
-  };
+//   // part II
+//   Function.prototype.bind = function(context) {
+//     // your code here!
+//   };
 
 
-  // Part II tests!
+//   // Part II tests!
 
-// should return a function
-var rez = func1.bind();
-console.log(`Test1.2: should return a function - expected true and got ${typeof rez === 'function'}`);
-// should not return the original function
-console.log(`Test2.2: should not return the original function - expected true and got ${rez !== func1}`);
+// // should return a function
+// var rez = func1.bind();
+// console.log(`Test1.2: should return a function - expected true and got ${typeof rez === 'function'}`);
+// // should not return the original function
+// console.log(`Test2.2: should not return the original function - expected true and got ${rez !== func1}`);
 
-// should return a result when calling the bound function
-var boundFunk1 = func2.bind(context1, "foobar");
-var result9 = boundFunk1();
-console.log(`Test3.2: should return a result when calling the bound function - expected foobar and got ${result9}`);
+// // should return a result when calling the bound function
+// var boundFunk1 = func2.bind(context1, "foobar");
+// var result9 = boundFunk1();
+// console.log(`Test3.2: should return a result when calling the bound function - expected foobar and got ${result9}`);
 
-// should call the "curried" function in the bound context
-var boundFunk2 = func3.bind(context2)
-var result10 = boundFunk2();
-console.log(`Test4.2: should call the "curried" function in the bound context - expected true and got ${result10 === context2}`);
+// // should call the "curried" function in the bound context
+// var boundFunk2 = func3.bind(context2)
+// var result10 = boundFunk2();
+// console.log(`Test4.2: should call the "curried" function in the bound context - expected true and got ${result10 === context2}`);
 
-// should bind the first argument
-var boundFunk3 = func2.bind(context1, 'foo');
-var result11 = boundFunk3();
-console.log(`Test5.2: should bind the first argument - expected foo and got ${result11}`);
+// // should bind the first argument
+// var boundFunk3 = func2.bind(context1, 'foo');
+// var result11 = boundFunk3();
+// console.log(`Test5.2: should bind the first argument - expected foo and got ${result11}`);
 
-// should allow the bound function to be called multiple times with different arguments
-var func7 = function(a){ return a + a };
-var boundFunk3 = bind(func7, context1);
-var result12 = boundFunk3('foo');
-var result13 = boundFunk3('bar');
-console.log(`Test6.2: should allow the bound function to be called multiple times with different arguments - expected foofoo and got ${result12} - expected barbar and got ${result13}`);
+// // should allow the bound function to be called multiple times with different arguments
+// var func7 = function(a){ return a + a };
+// var boundFunk3 = bind(func7, context1);
+// var result12 = boundFunk3('foo');
+// var result13 = boundFunk3('bar');
+// console.log(`Test6.2: should allow the bound function to be called multiple times with different arguments - expected foofoo and got ${result12} - expected barbar and got ${result13}`);
 
-// should bind the first and second arguments
-var boundFunk4 = func4.bind(context1, 'foo', 'bar');
-var result14 = boundFunk4();
-console.log(`Test7.2: should bind the first and second arguments - expected foobar and got ${result14}`);
+// // should bind the first and second arguments
+// var boundFunk4 = func4.bind(context1, 'foo', 'bar');
+// var result14 = boundFunk4();
+// console.log(`Test7.2: should bind the first and second arguments - expected foobar and got ${result14}`);
 
-// should bind only first and second arguments (in this example) and allow the bound function to take the third
-var boundFunk5 = func5.bind(context1, 'foo', 'bar');
-var result15 = boundFunk5('baz');
-console.log(`Test8.2: should bind only first and second arguments (in this example) and allow the bound function to take the third - expected foobarbaz and got ${result15}`);
+// // should bind only first and second arguments (in this example) and allow the bound function to take the third
+// var boundFunk5 = func5.bind(context1, 'foo', 'bar');
+// var result15 = boundFunk5('baz');
+// console.log(`Test8.2: should bind only first and second arguments (in this example) and allow the bound function to take the third - expected foobarbaz and got ${result15}`);
 
-// should bind only the first and second arguments (in this example) and allow the bound function to take the third and fourth
-var boundFunk6 = func6.bind(null, 'foo', 'bar');
-var result16 = boundFunk6('biz','baz');
-console.log(`Test9.2: should bind only the first and second arguments (in this example) and allow the bound function to take the third and fourth - expected foobarbizbaz and got ${result16}`);
+// // should bind only the first and second arguments (in this example) and allow the bound function to take the third and fourth
+// var boundFunk6 = func6.bind(null, 'foo', 'bar');
+// var result16 = boundFunk6('biz','baz');
+// console.log(`Test9.2: should bind only the first and second arguments (in this example) and allow the bound function to take the third and fourth - expected foobarbizbaz and got ${result16}`);

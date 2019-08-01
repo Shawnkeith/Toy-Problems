@@ -30,7 +30,7 @@ var allAnagrams = function(str){
     }
 
 
-// console.log(allAnagrams('abc'))
-// console.log(allAnagrams('abcd'))
+console.log(allAnagrams('abc'))
+console.log(allAnagrams('abcd'))
 console.log(allAnagrams('abcdef'))
-// console.log(allAnagrams('lint'))
+console.log(allAnagrams('lint'))

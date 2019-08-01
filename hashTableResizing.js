@@ -7,6 +7,7 @@ const makeHashTable = function() {
     
     //***Finish This Function***// 
     function resize(newSize) {
+      
       // your code here!
     }
     

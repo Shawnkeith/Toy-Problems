@@ -10,20 +10,20 @@
 // NOTE: DO NOT use JavaScript's built-in sorting function (Array.prototype.sort).
 
 var bubbleSort = function(array) {
-  var redo = false
-  for(let i = 0; i < array.length; i++){
-    if(array[i] > array[i+1]){
-      console.log(array)
-      array[i], array[i+1] = array[i+1], array[i]
-      redo = true
+    limit = array.length;
+    while(limit--){
+      for(i = 0; i < limit; i++){
+        if(array[i] > array[i+1]){
+          temp = array[i];
+          array[i] = array[i+1];
+          array[i+1] = temp
+          
+        }
+      }
+      
     }
-  }
-  if(redo === true){
-    bubbleSort(array);
-  }
-  console.log(array)
-  return array;
-};
+    return array;
+  } 
 
 
 ////////////////////* TEST CASES *////////////////////
