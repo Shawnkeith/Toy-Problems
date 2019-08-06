@@ -20,11 +20,13 @@ var toFraction = function (number) {
     }
     
     if(number%1 === 0.5  || number%1 === -.5){
-      // console.log(number)
+      console.log(number)
+
       if(parseInt(number) === 0){
         return '1/2';
       }
-      // console.log(number*100/(25)/(2))
+      console.log(number)
+      console.log(number*100/(25)/2)
       
       return number*100/(25)/(2) + '/2';
     }
@@ -55,7 +57,7 @@ var toFraction = function (number) {
           result = result + 0
           count--
         };
-        // console.log(result)
+        console.log(result)
         return Math.floor(number) + '/' + 1 + result;
       }
       console.log(number*100/(4) + '/' + '25')
