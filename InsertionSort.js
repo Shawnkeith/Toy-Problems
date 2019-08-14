@@ -17,23 +17,29 @@
 
 
 function insertionSort (array) {
-  for(let i =1; i<array.length; i++){
-    for(let j =i; j > -1; j--){
-      console.log(array[j])
-      if(array[j].value && array[i].value && array[i].value < array[i+1].value){
-          if(array[i+1].value < array[j].value){
-            array[j].value, array[i+1].value = array[i+1].value, array[j].value
-          }
+  for(let i = 1; i < array.length; i++){
+    for( let j = i; j > 0; j--){
+
+      let current = array[i].value
+      let previous = array[j-1].value
+      console.log(previous)
+      console.log(current)
+      if(previous !== undefined){
+        if(current < previous){
+          [previous, current] = [current, previous]
         }
+      }
     }
   }
   return array;
 };
 
 
+// console.log(insertionSort([2,5,7,9,3,1,6]))
+
 const test1 = insertionSort([ { "value": 3 }, { "value": 1 }, { "value": 2 } ]);
 console.log(`Test1: expected [ { "value": 1 }, { "value": 2 }, { "value": 3 } ] and got ${JSON.stringify(test1)}`);
-const test2 = insertionSort([ { "value": 10 }, { "value": 5, "order": 1 }, { "value": 5, "order": 2 } ]);
-console.log(`Test2: expected [ { "value": 5, "order": 1 }, { "value": 5, "order": 2 }, { "value": 10 } ] and got ${JSON.stringify(test2)}`);
+// const test2 = insertionSort([ { "value": 10 }, { "value": 5, "order": 1 }, { "value": 5, "order": 2 } ]);
+// console.log(`Test2: expected [ { "value": 5, "order": 1 }, { "value": 5, "order": 2 }, { "value": 10 } ] and got ${JSON.stringify(test2)}`);
 
 
