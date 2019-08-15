@@ -2,18 +2,15 @@
 
 Array.prototype.isSubsetOf = function(arr){
   //make this work with .every and .includes
-  
-    let input = this
-    const iterator = input.values();
-    for (const value of iterator) {
-    for(var i = 0; i < arr.length; i++){
-      let element = arr[i]
-      if( !arr.includes(iterator) ){
-        return false
-      }
-      }
+  let trueFalse = [];
+  for (let i = 0; i < this.length; i++){
+    trueFalse.push(arr.includes(this[i]))
+  }
+  console.log(trueFalse)
+    if(!trueFalse.includes(false)){
+      return true;
     }
-    return true;
+    return false;
   };
   
   arr1 = ['cat', 'dog', 'cow']
