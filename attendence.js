@@ -5,12 +5,12 @@ var checkRecord = function(s) {
         if (s[i] === 'A') {
             aCount++;
         }
-        if (s[i] === 'L' && s[i] + 1 === 'L' && s[i] + 2 === 'L') {
+        console.log(s[i + 1]);
+        if (s[i] === 'L' && s[i + 1] === 'L' && s[i + 2] === 'L') {
             lCount++;
-            console.log(s[i])
         }
     }
-    if (aCount < 2 && lCount < 0) {
+    if (aCount < 2 && lCount < 1) {
         return true;
     }
     return false;
